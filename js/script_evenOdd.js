@@ -40,7 +40,7 @@ btn.addEventListener("click", function () {
     btn.classList.add("disabled");
 });
 
-//?BONUS: inserimento bottone reset
+//!BONUS: inserimento bottone reset
 btnReset.addEventListener("click", function () {
     user.value = "even";
     userNumber.value = "1";
