@@ -17,16 +17,15 @@ var itemResult=document.getElementById("item-result");
 
 btn.addEventListener("click", function () {
   
-    // TODO validation user choice && userNumber
     validateNumber(parseInt(userNumber.value));
-    validateUser(user.value);
     var sum = 0;
     var msg = "";
     //*? 2: invoco la funzione random per in numero del computer
-    var rand = randomNumber();
+    var rand = randomNumber(1,5);
+    console.log(rand);  
     //*? 3: sommiano i due numeri;
     sum = rand + parseInt(userNumber.value);
-    // console.log(userNumber.value);
+   
     //*? 4: test vincita
     if ((isEven(sum) && (user.value === "even")) || (!isEven(sum) && (user.value === "odd"))) {
         msg = "Hai vinto : la somma è " + sum;
@@ -40,6 +39,8 @@ btn.addEventListener("click", function () {
     result.innerText=msg;
 
 });
+
+
 
 /** 
  * 
@@ -61,10 +62,12 @@ btn.addEventListener("click", function () {
 function isEven(num) {
     return (num % 2 == 0 ? true : false);
 }
-/** ritorna un numero tra 1 e 5 incluso
+/** ritorna un numero tra min and max
  * 
- * @returns {number} number from 1 to 5;
+ * @returns {number} number from @param min to @param max;
  */
-function randomNumber() {
-    return (Math.floor(Math.random() * (6 - 1)) + 1);
+function randomNumber(min, max) {
+    max++;
+    return (Math.floor(Math.random() * (max - min)) + min);
 }
+ 
