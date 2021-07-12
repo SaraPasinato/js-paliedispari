@@ -12,7 +12,7 @@ var user = document.getElementById("even-odd");
 var userNumber = document.getElementById("number");
 var btn = document.getElementById("btn-play");
 var result = document.getElementById("result");
-
+var btnReset=document.getElementById("btn-reset");
 var itemResult=document.getElementById("item-result");
 
 btn.addEventListener("click", function () {
@@ -37,11 +37,16 @@ btn.addEventListener("click", function () {
     //? 5: Output text html
     itemResult.classList.remove("hidden");
     result.innerText=msg;
-
+    btn.classList.add("disabled");
 });
 
-
-
+btnReset.addEventListener("click",function(){
+    user.value="even";
+    userNumber.value="1";
+    itemResult.classList.add("hidden"); 
+    console.clear();
+    btn.classList.remove("disabled");
+});
 /** 
  * 
  * @param {number} num 
