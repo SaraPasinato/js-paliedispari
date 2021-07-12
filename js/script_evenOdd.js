@@ -8,16 +8,18 @@
  */
 
 //*? 1: inizializzo le variabili
-
+var user = document.getElementById("even-odd");
+var userNumber = document.getElementById("number");
 var btn = document.getElementById("btn-play");
 var result = document.getElementById("result");
 
 var itemResult=document.getElementById("item-result");
 
 btn.addEventListener("click", function () {
-    var user = document.getElementById("even-odd");
-    var userNumber = document.getElementById("number");
-    
+  
+    // TODO validation user choice && userNumber
+    validateNumber(parseInt(userNumber.value));
+    validateUser(user.value);
     var sum = 0;
     var msg = "";
     //*? 2: invoco la funzione random per in numero del computer
@@ -39,8 +41,17 @@ btn.addEventListener("click", function () {
 
 });
 
-// TODO validation user choice && userNumber
-
+/** 
+ * 
+ * @param {number} num 
+ * @returns  alert se non hai inserito un numero corretto
+ */
+ function validateNumber(num){
+    while(isNaN(num) || (num<=0 || num>=6)){
+        alert("hai inserito un numero non valido.")
+        return;
+     }
+ }
 /**
  * 
  * @param {number} num 
