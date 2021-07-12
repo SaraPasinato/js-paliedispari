@@ -5,23 +5,23 @@
  */
 
 //? 1: inizializzo le variabili è chiedo all'utente una parola
-var userChoice=prompt("inserisci una stringa palindroma: ", "ailatiditalia").toLowerCase();
+var userChoice=prompt("inserisci una stringa palindroma: ", "Ai lati d Italia").toLowerCase();
 var pal= document.getElementById("text-palindrome");
 //? 2: scrive il messaggio al test di funzione 
 var msg="E' palindroma";
 //? 3: validazione per stringa vuoto o undefined o inNaN 
 while(!userChoice || userChoice===" "){ 
     alert("inserisci una parola");
-    userChoice=prompt("inserisci una stringa palindroma: ", "ailatiditalia").toLowerCase();
+    userChoice=prompt("inserisci una stringa palindroma: ", "Ai lati d Italia").toLowerCase();
 }
 //?4: invoco la funzione e stampo messaggio --- check funzione  palindrome di userChoice 
-if( !checkPalindrome(userChoice)){
+if( !checkPhrasePalindrome(userChoice)){
     msg="Non è palindroma";
 }
 // ?4: output in html text 
 pal.innerText=msg;
 
-    
+
 /** controlla se la parola sia palindroma 
  * 
  * @param {string} words 
@@ -40,4 +40,20 @@ function checkPalindrome(words) {
         }
     }
    return isPal;   
+}
+// ! BONUS: frase palindroma
+/** controlla non solo se è palindroma ma 
+ * elimina anche gli spazi in una frase 
+ * 
+ * @param {string} str 
+ * @returns {boolean} if palindrome
+ */
+function checkPhrasePalindrome(str){
+    var arr = str.split(" ");
+    console.table(arr);
+    var strMarge="";
+    for(var i=0;i<arr.length;i++){
+        strMarge+=arr[i];
+    }
+    return checkPalindrome(strMarge);
 }
