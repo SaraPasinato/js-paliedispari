@@ -23,7 +23,7 @@ btn.addEventListener("click", function () {
     //*? 2: invoco la funzione random per in numero del computer
     var rand = randomNumber(1, 5);
     console.log(rand);
-    //*? 3: sommiano i due numeri;
+    //*? 3: sommiamo i due numeri;
     sum = rand + parseInt(userNumber.value);
 
     //*? 4: test vincita
