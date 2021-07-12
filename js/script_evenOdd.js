@@ -8,14 +8,43 @@
  */
 
 //*? 1: inizializzo le variabili
-var user=document.getElementById("even-odd");
-var userNumber=document.getElementById("number");
+
+var btn = document.getElementById("btn-play");
+
 // TODO validation user choice && userNumber
 
-//*? 2: invoco la funzione random per in numero del computer
-var rand= randomNumber();
+btn.addEventListener("click", function () {
+    var user = document.getElementById("even-odd");
+    var userNumber = document.getElementById("number");
+    var sum = 0;
+    var msg = "";
+    //*? 2: invoco la funzione random per in numero del computer
+    var rand = randomNumber();
+    //*? 3: sommiano i due numeri;
+    sum = rand + parseInt(userNumber.value);
+    // console.log(userNumber.value);
+
+    if ((isEven(sum) && (user.value === "even")) || (!isEven(sum) && (user.value === "odd"))) {
+        msg = "Hai vinto : la somma è " + sum;
+    } else {
+        msg = "Hai perso : la somma è " + sum;
+    }
+    
+    // console.log(msg);
+    // console.log(rand);
+
+});
 
 
-function randomNumber(){
-    return Math.floor(Math.random()*(6-1))+1;
+
+
+function isEven(num) {
+    return (num % 2 == 0 ? true : false);
+}
+/** ritorna un numero tra 1 e 5 incluso
+ * 
+ * @returns {number} number from 1 to 5;
+ */
+function randomNumber() {
+    return (Math.floor(Math.random() * (6 - 1)) + 1);
 }

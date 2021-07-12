@@ -13,8 +13,9 @@
 </head>
 
 <body class="mt-4">
-    <!-- primo script palindrome -->
+
     <div class="container-sm">
+        <!-- primo script palindrome
         <div class="row justify-content-center align-content-center">
             <div class="col-12 w-50 text-center">
                 <h1 > E' PALINDROMA? </h1>
@@ -22,31 +23,45 @@
                     <p id="text-palindrome" class="fw-bold lead pt-4"></p>
                 </div>
             </div>
-        </div>  
+        </div> 
+         </div> 
         <script type="text/javascript" src="./js/script_palindrome.js"></script>
-     <!-- secondo script testa pari o dispari  -->
-     <div class="row justify-content-center align-content-center mt-4">
-        <div class="col-12 w-50">
-            <h1 class="text-uppercase text-center"> Pari o Dispari ? </h1>
-            <div class="box rounded bg-info text-center py-2">
-                <label for="even-odd" class="form-label">Scegli:</label>
-                <select id="even-odd">
-                    <option selected value="even">Pari</option>
-                    <option value="odd">Dispari</option>
-                </select>
-            
-                <label for="number" class="form-label">inserisci un numero (da 1 a 5):</label>
-                <input type="number" id="number" class="col-form-label" max="5" min="1" value="1">
-                <button class="btn btn-secondary btn-large mt-4"id="btnPlay">Gioca !</button>
-                <div class="item border border-secondary rounded w-75 mx-auto mt-5">
-                    <p class="lead">Ha vinto : <span id="result"class="fw-bold" >User</span></p>
-                </div>
+         -->
 
+        <!-- secondo script testa pari o dispari  -->
+        <header id=" sub-header" class="text-center">
+            <h1 class="text-uppercase text-center"> Pari o Dispari ? </h1>
+        </header>
+        <section class="container-sm  bg-info rounded text-center py-2">
+            <div class="row justify-content-around align-content-center ">
+                <div class="col-6 w-50">
+                    <div class="box ">
+                        <label for="even-odd" class="form-label">Scegli:</label>
+                        <select id="even-odd">
+                            <option selected value="even">Pari</option>
+                            <option value="odd">Dispari</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6 w-50">
+                    <label for="number" class="form-label">inserisci un numero (da 1 a 5):</label>
+                    <input type="number" id="number" class="col-form-label" max="5" min="1" value="1">
+
+                </div>
             </div>
-        </div>
-    </div>  
+            <div class="row justify-content-center align-content-center ">
+                <div class="col-6 w-50">
+
+                    <button class="btn btn-secondary btn-lg mt-1" id="btnPlay">Gioca !</button>
+                    <div class="item border border-secondary rounded w-75 mx-auto mt-1">
+                        <p class="lead">Ha vinto : <span id="result" class="fw-bold">User</span></p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
         <script type="text/javascript" src="./js/script_evenOdd.js"></script>
-    </div>
+
 
 </body>
 
