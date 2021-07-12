@@ -8,4 +8,14 @@
  */
 
 //*? 1: inizializzo le variabili
+var user=document.getElementById("even-odd");
+var userNumber=document.getElementById("number");
+// TODO validation user choice && userNumber
 
+//*? 2: invoco la funzione random per in numero del computer
+var rand= randomNumber();
+
+
+function randomNumber(){
+    return Math.floor(Math.random()*(6-1))+1;
+}
