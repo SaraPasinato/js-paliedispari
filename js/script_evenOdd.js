@@ -6,3 +6,6 @@
  * Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
  * Dichiariamo chi ha vinto.
  */
+
+//*? 1: inizializzo le variabili
+
