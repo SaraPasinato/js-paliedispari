@@ -5,7 +5,7 @@
  */
 
 //? 1: inizializzo le variabili è chiedo all'utente una parola
-var userChoice = prompt("inserisci una stringa palindroma: ", "Ai lati d Italia").toLowerCase();
+var userChoice = prompt("inserisci una stringa palindroma: ", "Ai lati d Italia").toLowerCase().trim();
 var pal = document.getElementById("text-palindrome");
 //? 2: scrive il messaggio al test di funzione 
 var msg = "E' palindroma";
